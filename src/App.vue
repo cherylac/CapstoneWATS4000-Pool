@@ -1,20 +1,65 @@
 <template>
   <div id="app" class="container">
-  <h1>Hello App Vue</h1>
-  
-     
+    <div class="page-header">
+  <h1>Hello Books!</h1>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Add New Books</h3>
+    </div>
+    <div class="panel-body">
+      <form id="form" class="form-inline" v-on:submit.prevent="addBook">
+        <div class="form-group">
+          <label for="bookAuthor">Author:</label>
+          <input type="text" id="bookAuthor" class="form-control" v-model="newBook.author">
+        </div>
+        <div class="form-group">
+          <label for="bookTitle">Title:</label>
+          <input type="text" id="bookTitle" class="form-control" v-model="newBook.title">
+        </div>
+        <div class="form-group">
+          <label for="bookUrl">Url:</label>
+          <input type="text" id="bookUrl" class="form-control" v-model="newBook.url">
+        </div>
+        <input type="submit" class="btn btn-primary" value="Add Book">
+      </form>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Book List</h3>
+      </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Author</th>
+          <th>Title</th>
+          <th></th>
+         </tr>
+        </thead>
+        <tbody>
+          <tr v-for="book in books">
+            <td><a v-bind:href="book.url">{{book.author}}</a></td>
+            <td>{{book.title}}</td>
+            <td><span class="glyphicon glyphicon-trash" aria-hidden="true" v-on:click="removeBook(book)"></span></td>
+          </tr>
+        </tbody>
+    </table>
+    </div>
+  </div>
   </div>
 </template>
 <script>
 import Firebase from 'firebase'
 import toastr from 'toastr'
  let config = {
-    apiKey: "AIzaSyCQphEKrAx7M6kCA0wqlj2QICzcrycLpeA",
-    authDomain: "birthdate-pool.firebaseapp.com",
-    databaseURL: "https://birthdate-pool.firebaseio.com",
-    projectId: "birthdate-pool",
-    storageBucket: "birthdate-pool.appspot.com",
-    messagingSenderId: "838139933356"
+    apiKey: "AIzaSyBr9Ig1eWoBWfjvgvlJkqO3SFYKEfpQhrE",
+    authDomain: "vuejs-firebase-01-89ffe.firebaseapp.com",
+    databaseURL: "https://vuejs-firebase-01-89ffe.firebaseio.com",
+    projectId: "vuejs-firebase-01-89ffe",
+    storageBucket: "vuejs-firebase-01-89ffe.appspot.com",
+    messagingSenderId: "288122196180"
   };
   
 let app = Firebase.initializeApp(config)
@@ -23,24 +68,34 @@ let booksRef = db.ref('books')
 
 export default {
   name: 'app',
-  // firebase: {
-  //   books: booksRef
-  // },
+  firebase: {
+    books: booksRef
+  },
   
-  // data () {
-  //   return {
-  //     newBook: {
-  //         title: '',
-  //         author: '',
-  //         url: 'http://'
-  //     }
-  //   }
-  // }
+  data () {
+    return {
+      newBook: {
+          author: '',
+          title: '',
+          url: 'http://'
+      }
+    }
+  },
   
-   
-  
- 
+methods: {
+  addBook: function () {
+    booksRef.push(this.newBook);
+    this.newBook.author = '';
+    this.newBook.title = '';
+    this.newBook.url = 'http://';
+  },
+  removeBook: function (book) {
+    booksRef.child(book['.key']).remove()
+    toastr.success('Book removed successfully')
+  }
+  }
 }
+  
 </script>
 <style>
 #app {
