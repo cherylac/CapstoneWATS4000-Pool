@@ -1,24 +1,25 @@
 <template>
   <div id="app" class="container">
   <h1>Hello App Vue</h1>
-  <router-view/>
+  
      
   </div>
 </template>
 <script>
-// import Firebase from 'firebase'
-// import toastr from 'toastr'
-// let config = {
-  //   apiKey: "...",
-  //   authDomain: "...",
-  //   databaseURL: "...",
-  //   storageBucket: "...",
-  //   messagingSenderId: "..."
-  // };
+import Firebase from 'firebase'
+import toastr from 'toastr'
+ let config = {
+    apiKey: "AIzaSyCQphEKrAx7M6kCA0wqlj2QICzcrycLpeA",
+    authDomain: "birthdate-pool.firebaseapp.com",
+    databaseURL: "https://birthdate-pool.firebaseio.com",
+    projectId: "birthdate-pool",
+    storageBucket: "birthdate-pool.appspot.com",
+    messagingSenderId: "838139933356"
+  };
   
-// let app = Firebase.initializeApp(config)
-// let db = app.database()
-// let booksRef = db.ref('books')
+let app = Firebase.initializeApp(config)
+let db = app.database()
+let booksRef = db.ref('books')
 
 export default {
   name: 'app',
