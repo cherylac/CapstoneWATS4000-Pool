@@ -1,11 +1,11 @@
 <template>
   <div id="app" class="container">
     <div class="page-header">
-  <h1>Baby Pool!</h1>
+  <h1>Baby Pool</h1>
   </div>
   <div class="panel panel-default">
     <div class="panel-heading">
-      <h3 class="panel-title">Contest A</h3>
+      <h3 class="panel-title">Enter Contest</h3>
     </div>
     <div class="panel-body">
       <form id="form" class="form-inline" v-on:submit.prevent="addEntry">
