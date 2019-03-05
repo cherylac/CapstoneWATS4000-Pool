@@ -56,7 +56,7 @@
             <td>{{entry.date}}</td>
             <td>{{entry.weight}}</td>
             <td>{{entry.babyname}}</td>
-            <td><span class="glyphicon glyphicon-trash" aria-hidden="true" v-on:click="removeEntry(entry)"></span></td>
+            <td><span class="far fa-trash-alt" aria-hidden="true" v-on:click="removeEntry(entry)"></span></td>
           </tr>
         </tbody>
     </table>
