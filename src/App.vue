@@ -64,8 +64,9 @@
   </div>
   </div>
 </template>
+<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-app.js"></script>
 <script>
-import Firebase from 'firebase'
+import firebase from 'firebase'
 import toastr from 'toastr'
  let config = {
     apiKey: "AIzaSyCQphEKrAx7M6kCA0wqlj2QICzcrycLpeA",
@@ -75,8 +76,9 @@ import toastr from 'toastr'
     storageBucket: "birthdate-pool.appspot.com",
     messagingSenderId: "838139933356"
   };
+
   
-let app = Firebase.initializeApp(config)
+let app = firebase.initializeApp(config)
 let db = app.database()
 let entriesRef = db.ref('entries')
 
