@@ -1,13 +1,13 @@
 <template>
-  <div id="app" class="container">
-    <div class="page-header">
-  <h1>Baby Pool</h1>
+ <!-- <div id="app" class="container"> -->
+    <!-- <div class="page-header"> -->
+  <!-- <h1>Baby Pool</h1>
   </div>
   <div class="panel panel-default">
     <div class="panel-heading">
       <h3 class="panel-title">Enter Contest</h3>
-    </div>
-    <div class="panel-body">
+    </div> -->
+    <!-- <div class="panel-body">
       <form id="form" class="form-inline" v-on:submit.prevent="addEntry">
         <div class="form-group">
           <label for="entryContestant">Your name:</label>
@@ -64,8 +64,9 @@
   </div>
   </div>
 </template>
+<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-app.js"></script>
 <script>
-import Firebase from 'firebase'
+import firebase from 'firebase'
 import toastr from 'toastr'
  let config = {
     apiKey: "AIzaSyCQphEKrAx7M6kCA0wqlj2QICzcrycLpeA",
@@ -75,8 +76,9 @@ import toastr from 'toastr'
     storageBucket: "birthdate-pool.appspot.com",
     messagingSenderId: "838139933356"
   };
+
   
-let app = Firebase.initializeApp(config)
+let app = firebase.initializeApp(config)
 let db = app.database()
 let entriesRef = db.ref('entries')
 
@@ -123,4 +125,4 @@ methods: {
   color: #2c3e50;
   margin-top: 20px;
 }
-</style>
+</style> -->

@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import VueFire from 'vuefire'
 import App from './App'
-import router from './router'
+import Router from './router'
 
 /* eslint-disable no-new */
 Vue.use(VueFire)
