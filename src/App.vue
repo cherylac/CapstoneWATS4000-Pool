@@ -1,14 +1,15 @@
 <template>
   <div id="app" class="container">
-    <div class="page-header">
-  <h1>Baby Pool</h1>
+    <div class="jumbotron">
+  <h1 class="display-4">Baby Pool</h1>
+   <p class="lead">When do you think the baby will be born? Enter below!</p>
   </div>
   <div class="panel panel-default">
     <div class="panel-heading">
       <h3 class="panel-title">Enter Contest</h3>
     </div>
     <div class="panel-body">
-      <form id="form" class="form-inline" v-on:submit.prevent="addEntry">
+      <form id="form" class="form-inline" v-on:submit.prevent="addEntry"> 
         <div class="form-group">
           <label for="entryContestant">Your name:</label>
           <input type="text" id="entryContestant" class="form-control" v-model="newEntry.contestant">
@@ -33,6 +34,7 @@
       </form>
     </div>
   </div>
+
   <div class="panel panel-default">
     <div class="panel-heading">
       <h3 class="panel-title">Entries</h3>
