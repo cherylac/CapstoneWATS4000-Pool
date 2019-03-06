@@ -3,7 +3,8 @@
 import Vue from 'vue'
 import VueFire from 'vuefire'
 import App from './App'
-import Router from './router'
+import router from './router';
+
 
 /* eslint-disable no-new */
 Vue.use(VueFire)
@@ -11,6 +12,7 @@ Vue.config.productionTip = false
 
 new Vue({
   el: '#app',
+  router,
   template: '<App/>',
   components: { App }
 })
