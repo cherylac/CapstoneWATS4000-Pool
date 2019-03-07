@@ -59,7 +59,7 @@
             <td>{{entry.weight}}</td>
             <td>{{entry.babyname}}</td>
             <td><span class="far fa-trash-alt" aria-hidden="true" v-on:click="removeEntry(entry)"></span></td>
-          </tr>
+          </tr><!--TO DO - add hover effect over trash cans-->
         </tbody>
     </table>
     </div>

@@ -1,7 +1,7 @@
 <template>
   <div class="home">
       <div class="form-container" v-show="showForm">
-          <h1>Welcome to the "Guess the Birthdate" Pool Page</h1>
+          <h1>Welcome to the Birthdate Pool App!</h1>
           <p>Please enter your email to sign in</p>
           <form v-on:submit.prevent="validateForm">
               <p>
@@ -61,5 +61,11 @@ li {
 }
 a {
   color: #42b983;
+}
+.form-container {
+    text-align: center;
+}
+.success-message {
+    text-align: center;
 }
 </style>
