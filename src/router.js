@@ -1,24 +1,22 @@
 import Vue from 'vue'
-import VueFire from 'vuefire'
-import App from './App'
 import Home from '@/views/Home'
 import Router from 'vue-router'
-//import Pool from '@/views/Pool'
+import Pool from '@/views/Pool'
 
 Vue.use(Router)
 export default new Router({
 
   routes: [
+  
     {
       path: '/',
       name: 'Home',
-      components: Home
+      component: Home
     },
-
     {
-      path: './App',
-      name: 'App',
-      components: App
+      path:'/pool',
+      name: 'Pool',
+      component:Pool
     }
 
   ]

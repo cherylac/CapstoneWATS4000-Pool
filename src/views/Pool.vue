@@ -1,14 +1,15 @@
 <template>
- <!-- <div id="app" class="container"> -->
-    <!-- <div class="page-header"> -->
-  <!-- <h1>Baby Pool</h1>
+  <div id="pool" class="container">
+    <div class="jumbotron">
+  <h1 class="display-4">Baby Pool</h1>
+   <p class="lead">When do you think the baby will be born? Enter below!</p>
   </div>
   <div class="panel panel-default">
     <div class="panel-heading">
       <h3 class="panel-title">Enter Contest</h3>
-    </div> -->
-    <!-- <div class="panel-body">
-      <form id="form" class="form-inline" v-on:submit.prevent="addEntry">
+    </div>
+    <div class="panel-body">
+      <form id="form" class="form-inline" v-on:submit.prevent="addEntry"> 
         <div class="form-group">
           <label for="entryContestant">Your name:</label>
           <input type="text" id="entryContestant" class="form-control" v-model="newEntry.contestant">
@@ -33,6 +34,7 @@
       </form>
     </div>
   </div>
+
   <div class="panel panel-default">
     <div class="panel-heading">
       <h3 class="panel-title">Entries</h3>
@@ -50,13 +52,13 @@
          </tr>
         </thead>
         <tbody>
-          <tr v-for="entry in entries">
+          <tr v-for="(entry,index) in entries" :key="index">
             <td>{{entry.contestant}}</td>
             <td>{{entry.email}}</td>
             <td>{{entry.date}}</td>
             <td>{{entry.weight}}</td>
             <td>{{entry.babyname}}</td>
-            <td><span class="glyphicon glyphicon-trash" aria-hidden="true" v-on:click="removeEntry(entry)"></span></td>
+            <td><span class="far fa-trash-alt" aria-hidden="true" v-on:click="removeEntry(entry)"></span></td>
           </tr>
         </tbody>
     </table>
@@ -64,7 +66,7 @@
   </div>
   </div>
 </template>
-<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-app.js"></script>
+
 <script>
 import firebase from 'firebase'
 import toastr from 'toastr'
@@ -83,7 +85,7 @@ let db = app.database()
 let entriesRef = db.ref('entries')
 
 export default {
-  name: 'app',
+  name: 'pool',
   firebase: {
     entries: entriesRef
   },
@@ -118,11 +120,23 @@ methods: {
   
 </script>
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+#pool {
+  font-family: 'Handlee', cursive;
+  /* 'Avenir', Helvetica, Arial, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   margin-top: 20px;
 }
-</style> -->
+
+.jumbotron {
+  text-align: center;
+  font-family: 'Handlee', cursive;
+  background-color: 	#f8ab99;
+  color:#f7fffc; 
+}
+
+.btn-primary {
+  background-color:#83daba; 
+}
+</style>
