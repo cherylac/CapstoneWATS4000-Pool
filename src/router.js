@@ -10,8 +10,15 @@ export default new Router({
   
     {
       path: '/',
+      name: 'Home',
+      components: Home
+    },
+
+    {
+      path: '/pool',
       name: 'Pool',
-      components: Pool
+      component: Pool
+
     }
 
   ]
