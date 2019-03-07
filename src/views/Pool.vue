@@ -66,7 +66,7 @@
   </div>
   </div>
 </template>
-<!--<script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-app.js"></script>-->
+
 <script>
 import firebase from 'firebase'
 import toastr from 'toastr'
