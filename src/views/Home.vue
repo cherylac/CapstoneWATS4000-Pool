@@ -15,7 +15,7 @@
                       <div class="success-message" v-show="!showForm">
                           <h1>Thank you for signing in!</h1>
                               <p>Please click on the pool you wish to enter. 
-                                  <router-link to="/pool">Pool 1</router-link></p>
+                                  <router-link to="./Pool">Pool 1</router-link></p>
                                   </div>
                                   </div>
                                   </template>

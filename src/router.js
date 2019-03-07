@@ -11,14 +11,12 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      components: Home
+      component: Home
     },
-
     {
-      path: '/pool',
+      path:'/pool',
       name: 'Pool',
-      component: Pool
-
+      component:Pool
     }
 
   ]
