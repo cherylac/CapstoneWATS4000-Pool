@@ -59,7 +59,6 @@
             <td>{{entry.weight}}</td>
             <td>{{entry.babyname}}</td>
             <td><span class="far fa-trash-alt" aria-hidden="true" v-on:click="removeEntry(entry)"></span></td>
-          </tr><!--TO DO - add hover effect over trash cans-->
         </tbody>
     </table>
     </div>
@@ -125,18 +124,41 @@ methods: {
   /* 'Avenir', Helvetica, Arial, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  color: #0c2238;
   margin-top: 20px;
+  background-color: #fff;
 }
 
 .jumbotron {
   text-align: center;
   font-family: 'Handlee', cursive;
   background-color: 	#f8ab99;
-  color:#f7fffc; 
+  color:#400040; 
+  font-weight: 575;
+  border-color: #400040;
 }
 
 .btn-primary {
-  background-color:#83daba; 
+  background-color:#6ee2b8; 
+  color: rgb(27, 13, 65);
+  border-color: #d0d3d2;
+  font-weight: 575;
 }
+
+.fa-trash-alt {
+  cursor: pointer;
+}
+
+.lead {
+  font-weight: 575;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+h3 {
+  font-weight: 600;
+}
+
 </style>
