@@ -64,8 +64,10 @@ a {
 }
 .form-container {
     text-align: center;
+    font-family: 'Handlee', cursive;
 }
 .success-message {
     text-align: center;
+    font-family: 'Handlee', cursive;
 }
 </style>

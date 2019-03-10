@@ -16,17 +16,19 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: left;
-  color: #2c3e50;
+  color: black;
   width: 100%;
   min-height: 100vh;
   height: 100%;
   margin: 0 auto;
   background: #fff;
   padding: 2rem;
+  font-size: 1.21rem;
+  font-weight: 575;
 }
 body,
 html {
-  background: #666;
+  
   margin: 0;
   padding: 0;
 }
