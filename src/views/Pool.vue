@@ -149,7 +149,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #0c2238;
-  margin-top: 20px;
   background-color: rgb(250, 250, 246);
 
 }
@@ -165,7 +164,7 @@ export default {
 
 .btn-primary {
   background-color: #6ee2b8;
-  color: rgb(27, 13, 65);
+  color: #000c40;
   border-color: #d0d3d2;
   font-weight: 575;
 }
@@ -176,6 +175,7 @@ export default {
 
 .lead {
   font-weight: 575;
+  color: #400040;
 }
 
 h1 {

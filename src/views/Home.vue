@@ -50,7 +50,11 @@ export default {
   color: #aa0000;
 }
 h1, h2 {
-  font-weight: normal;
+  font-weight: 555;
+}
+
+p {
+    font-weight: 555;
 }
 
 ul {
@@ -67,14 +71,22 @@ li {
 a {
   color: #cf6f5a;
 }
+
 .form-container {
     text-align: center;
     font-family: 'Handlee', cursive;
+    color: #400040;
+    background-color:rgb(250, 250, 246);
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 .success-message {
     text-align: center;
     font-family: 'Handlee', cursive;
-    background-color:rgb(253, 253, 247);
+    background-color:rgb(250, 250, 246);
     text-align: center;
+    color: #400040;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 </style>
