@@ -21,10 +21,10 @@ export default {
   min-height: 100vh;
   height: 100%;
   margin: 0 auto;
-  background: #fff;
+  background-image: url("assets/backgroundsmaller.jpg");
   padding: 2rem;
-  font-size: 1.21rem;
-  font-weight: 575;
+  font-size: 1.2rem;
+  font-weight: 550;
 }
 body,
 html {

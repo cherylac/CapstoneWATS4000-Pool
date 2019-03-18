@@ -150,7 +150,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #0c2238;
   margin-top: 20px;
-  background-color: #fff;
+  background-color: rgb(250, 250, 246);
+
 }
 
 .jumbotron {
@@ -159,7 +160,7 @@ export default {
   background-color: #f8ab99;
   color: #400040;
   font-weight: 575;
-  border-color: #400040;
+  margin-top: 3rem;
 }
 
 .btn-primary {
@@ -187,4 +188,5 @@ h3 {
 .btn {
   margin: 1rem 0;
 }
+
 </style>

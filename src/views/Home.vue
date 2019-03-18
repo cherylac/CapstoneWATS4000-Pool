@@ -15,7 +15,8 @@
                       <div class="success-message" v-show="!showForm">
                           <h1>Thank you for signing in!</h1>
                               <p>Please click on the pool you wish to enter. 
-                                  <router-link to="./Pool">Pool 1</router-link></p>
+                                  <ul><li><router-link to="./Pool">Pool</router-link></li></ul></p>
+                                  
                                   </div>
                                   </div>
                                   </template>
@@ -51,16 +52,20 @@ export default {
 h1, h2 {
   font-weight: normal;
 }
+
 ul {
-  list-style-type: none;
-  padding: 0;
+  list-style-type: square;
 }
+
 li {
   display: inline-block;
   margin: 0 10px;
+  font-weight:700;
+  font-size: 2em; 
+  color:#cf6f5a; 
 }
 a {
-  color: #42b983;
+  color: #cf6f5a;
 }
 .form-container {
     text-align: center;
@@ -69,5 +74,7 @@ a {
 .success-message {
     text-align: center;
     font-family: 'Handlee', cursive;
+    background-color:rgb(253, 253, 247);
+    text-align: center;
 }
 </style>
