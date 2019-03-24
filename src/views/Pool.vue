@@ -135,21 +135,17 @@ export default {
 <style>
 #pool {
   font-family: "Handlee", cursive;
-  /* 'Avenir', Helvetica, Arial, sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #0c2238;
 
 }
 
-#div.toastr {
-  background-color:chartreuse !important;
-  color: black;
-}
 
 .container {
   background-color: rgb(250, 250, 246);
 }
+
 
 .jumbotron {
   text-align: center;
@@ -187,5 +183,14 @@ h3 {
   margin: 1rem 0;
 }
 
+.toast-success {
+background-color:rgb(26, 206, 152) !important;
+color: #400040 !important;
+}
+
+.toast-message {
+  color: #400040 !important;
+  background-color: rgb(26, 206, 152) !important;
+}
 
 </style>
