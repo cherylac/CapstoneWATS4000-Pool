@@ -21,7 +21,7 @@
         </div>
         <div class="col">
           <label for="guessDate">Guess birthdate</label>
-          <input type="date" v-model="newEntry.date" class="form-control" aria-describedby="guessDate">
+          <input type="text" v-model="newEntry.date" class="form-control" aria-describedby="guessDate">
         </div>
          <div class="col">
            <label for="guessWeight">Guess weight</label>
