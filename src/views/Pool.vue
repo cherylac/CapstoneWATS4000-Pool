@@ -11,17 +11,25 @@
       <div class="form-row">
        
         <div class="col">
-          <input type="text" class="form-control" placeholder="Your name"
+          <label for="yourName">Name</label>
+          <input type="text" class="form-control" aria-describedby="enterContestant"
           id="entryContestant" v-model="newEntry.contestant">
         </div>
          <div class="col">
-          <input type="text" v-model="newEntry.email" class="form-control" placeholder="Email">
+           <label for="email">Your email</label>
+          <input type="email" v-model="newEntry.email" class="form-control" aria-describedby="enterEmail">
+        </div>
+        <div class="col">
+          <label for="guessDate">Guess birthdate</label>
+          <input type="date" v-model="newEntry.date" class="form-control" aria-describedby="guessDate">
         </div>
          <div class="col">
-          <input type="text" v-model="newEntry.weight" class="form-control" placeholder="Guess Weight">
+           <label for="guessWeight">Guess weight</label>
+          <input type="text" v-model="newEntry.weight" class="form-control" aria-describedby="guessWeight">
         </div>
           <div class="col">
-          <input type="text" class="form-control" v-model="newEntry.babyname" placeholder="Guess Name">
+          <label for="guessName">Guess name</label>
+          <input type="text" class="form-control" aria-describedby="guessName" v-model="newEntry.babyname">
         </div>
       </div>
       <div class="panel-body">
@@ -131,8 +139,16 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #0c2238;
-  background-color: rgb(250, 250, 246);
 
+}
+
+#div.toastr {
+  background-color:chartreuse !important;
+  color: black;
+}
+
+.container {
+  background-color: rgb(250, 250, 246);
 }
 
 .jumbotron {
@@ -147,8 +163,8 @@ export default {
 .btn-primary {
   background-color: #6ee2b8;
   color: #000c40;
-  border-color: #d0d3d2;
   font-weight: 575;
+  border-color: #6ee2b8;
 }
 
 .fa-trash-alt {
@@ -170,5 +186,6 @@ h3 {
 .btn {
   margin: 1rem 0;
 }
+
 
 </style>
