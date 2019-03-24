@@ -26,36 +26,10 @@
       </div>
       <div class="panel-body">
         <form id="form" class v-on:submit.prevent="addEntry">
-          <!-- <div class="form-group">
-            <label for="entryContestant">Your name:</label>
-            <input
-              type="text"
-              id="entryContestant"
-              class="form-control"
-              v-model="newEntry.contestant"
-            >
-          </div> -->
-          <!-- <div class="form-group">
-            <label for="entryEmail">Email:</label>
-            <input type="text" id="entryTitle" class="form-control" v-model="newEntry.email">
-          </div>
-          <div class="form-group">
-            <label for="bookUrl">Guess Date:</label>
-            <input type="text" id="entryDate" class="form-control" v-model="newEntry.date">
-          </div>
-          <div class="form-group">
-            <label for="entryWeight">Guess Weight:</label>
-            <input type="text" id="entryWeight" class="form-control" v-model="newEntry.weight">
-          </div>
-          <div class="form-group">
-            <label for="entryBabyname">Guess Name:</label>
-            <input type="text" id="entryBabyname" class="form-control" v-model="newEntry.babyname">
-          </div> -->
           <input type="submit" class="btn btn-primary" value="Add Entry">
         </form>
       </div>
     </div>
-
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title">Entries</h3>
@@ -93,8 +67,16 @@
 </template>
 
 <script>
-import firebase from "firebase";
-import toastr from "toastr";
+import firebase from 'firebase'
+import toastr from 'toastr'
+import Vue from 'vue'
+import VueAnalytics from 'vue-analytics'
+
+Vue.use(VueAnalytics, {
+  id: 'UA-129287138-2',
+  checkDuplicatedScript: true
+})
+
 let config = {
   apiKey: "AIzaSyCQphEKrAx7M6kCA0wqlj2QICzcrycLpeA",
   authDomain: "birthdate-pool.firebaseapp.com",

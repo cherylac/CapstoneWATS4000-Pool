@@ -13,6 +13,7 @@
     "firebase": "^5.8.2",
     "toastr": "^2.1.4",
     "vue": "^2.5.21",
+    "vue-analytics": "^5.16.4",
     "vue-router": "^3.0.2",
     "vue2-animate": "^2.1.0",
     "vuefire": "^1.4.5"
